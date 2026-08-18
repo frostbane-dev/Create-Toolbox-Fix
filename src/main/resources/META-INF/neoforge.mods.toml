@@ -1,0 +1,19 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="create_toolbox_fix"
+version="1.0.0"
+displayName="Create Toolbox Fix"
+authors="StackUltra"
+description='''
+Fixes and enhancements for Create Toolboxes:
+- Empty toolboxes stack up to 64.
+- Pistons break toolboxes into items, like shulker boxes.
+- Dispensers can place toolboxes as blocks.
+- Filled toolboxes can be requested from Stock Keeper / Item Vault through interfaces.
+'''
+
+[[mixins]]
+config = "create_toolbox_fix.mixins.json"

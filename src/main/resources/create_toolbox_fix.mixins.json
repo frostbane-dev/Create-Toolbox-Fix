@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.stackultra.createtoolboxfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ToolboxStackLimitMixin",
+    "ToolboxPistonBreakMixin",
+    "ToolboxRequestScreenMixin",
+    "ToolboxProcessRequestMixin",
+    "ToolboxPackagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1,
+    "maxShiftBy": 3
+  }
+}

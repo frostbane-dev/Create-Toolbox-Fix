@@ -1,0 +1,13 @@
+{
+  "itemGroup.create_toolbox_fix": "Example Mod Tab",
+  "block.create_toolbox_fix.example_block": "Example Block",
+  "item.create_toolbox_fix.example_item": "Example Item",
+
+  "create_toolbox_fix.configuration.title": "Create Toolbox Fix Configs",
+  "create_toolbox_fix.configuration.section.create_toolbox_fix.common.toml": "Create Toolbox Fix Configs",
+  "create_toolbox_fix.configuration.section.create_toolbox_fix.common.toml.title": "Create Toolbox Fix Configs",
+  "create_toolbox_fix.configuration.items": "Item List",
+  "create_toolbox_fix.configuration.logDirtBlock": "Log Dirt Block",
+  "create_toolbox_fix.configuration.magicNumberIntroduction": "Magic Number Text",
+  "create_toolbox_fix.configuration.magicNumber": "Magic Number"
+}
