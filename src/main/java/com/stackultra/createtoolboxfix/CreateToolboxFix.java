@@ -19,10 +19,12 @@ public class CreateToolboxFix {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Registro del comportamiento del dispensador para la toolbox
-        Item toolboxItem = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("create", "toolbox"));
-        if (toolboxItem != null) {
-            DispenserBlock.registerBehavior(toolboxItem, new ToolboxDispenseBehavior());
+        // Registrar el comportamiento del dispensador para todos los ítems de toolbox
+        for (Item item : BuiltInRegistries.ITEM) {
+            ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+            if (id != null && id.getNamespace().equals("create") && id.getPath().contains("toolbox")) {
+                DispenserBlock.registerBehavior(item, new ToolboxDispenseBehavior());
+            }
         }
     }
 }
