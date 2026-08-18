@@ -14,6 +14,7 @@ Fixes and enhancements for Create Toolboxes:
 - Dispensers can place toolboxes as blocks.
 - Filled toolboxes can be requested from Stock Keeper / Item Vault through interfaces.
 '''
+issueTrackerURL="https://github.com/frostbane-dev/Create-Toolbox-Fix/issues"
 
 [[mixins]]
 config = "create_toolbox_fix.mixins.json"
