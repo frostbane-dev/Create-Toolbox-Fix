@@ -26,10 +26,8 @@ public abstract class ToolboxPackagerMixin {
             boolean extractedEmpty = isToolboxEmpty(extracted);
 
             if (requestedEmpty && extractedEmpty) {
-                // Vacías: coinciden por color
                 return extracted.getItem() == requested.getItem();
             } else if (!requestedEmpty && !extractedEmpty) {
-                // Llenas: coinciden solo si el contenido es exactamente igual
                 return areToolboxContentsEqual(extracted, requested);
             }
             return false;

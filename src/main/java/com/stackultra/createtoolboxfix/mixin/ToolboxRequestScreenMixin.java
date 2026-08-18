@@ -19,19 +19,11 @@ public abstract class ToolboxRequestScreenMixin {
     @Shadow
     private List<BigItemStack> itemsToOrder;
 
-    /**
-     * @author create_toolbox_fix
-     * @reason Evitar que las toolboxes llenas sean eliminadas de la orden.
-     */
     @Overwrite
     private void revalidateOrders() {
         // No hacemos nada: dejamos que el servidor valide y extraiga.
     }
 
-    /**
-     * @author create_toolbox_fix
-     * @reason Comparar toolboxes por color y, para llenas, contenido exacto ignorando UUID.
-     */
     @Overwrite
     private BigItemStack getOrderForItem(ItemStack stack) {
         for (BigItemStack entry : this.itemsToOrder) {
@@ -51,23 +43,19 @@ public abstract class ToolboxRequestScreenMixin {
                 // Vacías: agrupar por color
                 return a.getItem() == b.getItem();
             } else if (!aEmpty && !bEmpty) {
-                // Llenas: comparar inventario internos exactos
-                return areToolboxInventoriesEqual(a, b);
+                // Llenas: comparar contenido exacto ignorando UUID
+                return areToolboxContentsEqual(a, b);
             }
             return false;
         }
         return ItemStack.isSameItemSameComponents(a, b);
     }
 
-    private static boolean areToolboxInventoriesEqual(ItemStack a, ItemStack b) {
+    private static boolean areToolboxContentsEqual(ItemStack a, ItemStack b) {
         ToolboxInventory invA = a.getOrDefault(AllDataComponents.TOOLBOX_INVENTORY, null);
         ToolboxInventory invB = b.getOrDefault(AllDataComponents.TOOLBOX_INVENTORY, null);
-        if (invA == null || invB == null) {
-            return false;
-        }
-        if (invA.getSlots() != invB.getSlots()) {
-            return false;
-        }
+        if (invA == null || invB == null) return false;
+        if (invA.getSlots() != invB.getSlots()) return false;
         for (int i = 0; i < invA.getSlots(); i++) {
             ItemStack stackA = invA.getStackInSlot(i);
             ItemStack stackB = invB.getStackInSlot(i);
