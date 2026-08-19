@@ -8,7 +8,7 @@ A small NeoForge mod for Minecraft 1.21.1 that improves and fixes Toolbox behavi
 * **Dispenser Support:** Dispensers can place toolboxes.
 
 ## Bug Fixes
-* **Issue #8761:** This mod DOESNT resolves the issue where toolboxes would remain "ready for request" after being clicked, fixing persistent state bugs.
+* **Issue #8761:** This mod DOES'NT resolves the issue where toolboxes would remain "ready for request" after being clicked, fixing persistent state bugs.
   * [See original issue here](https://github.com/Creators-of-Create/Create/issues/8761) ( NOT IMPLEMENTED, WAITING FOR A PROPER FIX )
 
 ## Requirements
