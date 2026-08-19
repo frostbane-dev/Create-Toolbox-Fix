@@ -5,10 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ToolboxStackLimitMixin",
-    "ToolboxPistonBreakMixin",
-    "ToolboxRequestScreenMixin",
-    "ToolboxProcessRequestMixin",
-    "ToolboxPackagerMixin"
+    "ToolboxPistonBreakMixin"
   ],
   "injectors": {
     "defaultRequire": 1,

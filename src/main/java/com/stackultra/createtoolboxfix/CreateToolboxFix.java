@@ -19,7 +19,7 @@ public class CreateToolboxFix {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Registrar el comportamiento del dispensador para todos los ítems de toolbox
+        // Registra el comportamiento del dispensador para todas las toolboxes
         for (Item item : BuiltInRegistries.ITEM) {
             ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
             if (id != null && id.getNamespace().equals("create") && id.getPath().contains("toolbox")) {
