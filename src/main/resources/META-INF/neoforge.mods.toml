@@ -4,15 +4,14 @@ license="MIT"
 
 [[mods]]
 modId="create_toolbox_fix"
-version="1.0.0"
+version="1.0.1"
 displayName="Create Toolbox Fix"
 authors="StackUltra"
 description='''
 Fixes and enhancements for Create Toolboxes:
-- Empty toolboxes stack up to 64.
+- Empty toolboxes stack up to 64 again.
 - Pistons break toolboxes into items, like shulker boxes.
 - Dispensers can place toolboxes as blocks.
-- Filled toolboxes can be requested from Stock Keeper / Item Vault through interfaces.
 '''
 issueTrackerURL="https://github.com/frostbane-dev/Create-Toolbox-Fix/issues"
 
